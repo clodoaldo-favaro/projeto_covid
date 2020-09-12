@@ -48,10 +48,36 @@ table {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	background-color: #F9F9F9;
 }
 
 h1 {
     font-size: 2em;
     font-weight: 700;
+}
+
+.resultadoPesquisa {
+	margin: 10px 20px;
+}
+
+.barraPesquisa {
+	margin: 20px 20px;
+}
+
+#resultadoPesquisa {
+	resize: none;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+	background-color: #333;
+	color: #F3F3F3;
+	font-weight: 800;
+	text-align: center;
 }
