@@ -10,25 +10,8 @@
 </head>
 <body>
     
-    <?php
-        
-        if (isset($_POST)) {
-            
-            $connection = pg_connect("host=localhost port=5432 dbname=covid user=postgres password=postgres connect_timeout=5");
-            
-            if ($connection)  {
-                print_r($connection);
-                echo "Conectou";
-            }
-            else {
-                echo "Fudeu";
-            }
-            
 
-        }
-    ?>
-
-    <form action="" method="post">
+    <form action="resultado.php" method="post">
         <div class="md-form mt-0 barraPesquisa">
             <input class="form-control" type="text" 
             placeholder="Informe a cidade" 
@@ -37,10 +20,6 @@
             aria-label="Search" required>
         </div>
         
-        <div class="form-group resultadoPesquisa">
-            <label for="resultadoPesquisa">Resultado da pesquisa</label>
-            <textarea class="form-control" id="resultadoPesquisa" name="resultadoPesquisa" rows="10" readonly></textarea>
-        </div>
     </form>
 
     <footer class="footer">

@@ -58,16 +58,12 @@ h1 {
     font-weight: 700;
 }
 
-.resultadoPesquisa {
+.resultadoPesquisaContainer {
 	margin: 10px 20px;
 }
 
 .barraPesquisa {
 	margin: 20px 20px;
-}
-
-#resultadoPesquisa {
-	resize: none;
 }
 
 .footer {
