@@ -22,6 +22,10 @@
         
     </form>
 
+    <div class="container-fluid">
+        <a href="ranking.php">10 cidades com mais casos</a>
+    </div>
+
     <footer class="footer">
         <div class="container">
             O CSS é a prova que Deus nos odeia e quer que sejamos miseráveis.
