@@ -24,7 +24,7 @@
                 // display a message if connected to the PostgreSQL successfully
                 if($conn){
                     //echo "Connected to the <strong>$db</strong> database successfully!";
-                    $stmt = $conn->prepare('SELECT casos, obitos FROM casos WHERE cidade = :cidade');
+                    $stmt = $conn->prepare('SELECT casos, obitos, recuperados FROM casos WHERE cidade = :cidade');
                     $cidade = filter_input(INPUT_POST, 'cidade', FILTER_SANITIZE_STRING); // <-- filter your data first (see [Data Filtering](#data_filtering)), especially important for INSERT, UPDATE, etc.
                     $stmt->bindParam(':cidade', $cidade, PDO::PARAM_STR); // <-- Automatically sanitized for SQL by PDO
                     $stmt->execute();
@@ -32,12 +32,16 @@
                     
                     $casos = $result['casos'];
                     $obitos = $result['obitos'];
+                    $recuperados = $result['recuperados'];
                     $taxaMortalidade = ($obitos / $casos) * 100;
+                    $taxaRecuperados = ($recuperados/ $casos) * 100;
                     echo '<div class="resultadoPesquisaContainer">';
                     echo '<h1>Cidade:'  . $_POST['cidade'] . '</h1>';
                     echo '<h2>Casos confirmados: ' . $casos . '</h2>';
                     echo '<h2>Óbitos: ' . $obitos . '</h2>';
+                    echo '<h2>Recuperados: ' . $recuperados . '</h2>';
                     echo '<h2>Taxa de mortalidade: ' . $taxaMortalidade . '%</h2>';
+                    echo '<h2>Taxa de recuperados: ' . $taxaRecuperados . '%</h2>';
                     echo '</div>';
 
                 }

@@ -1,3 +1,7 @@
+insert into casos (estado, cidade, casos, obitos, data)
+
+values
+
 ('RO','Alta Floresta D''Oeste',643,10,'2020-09-11'),
 ('RO','Ariquemes',4937,81,'2020-09-11'),
 ('RO','Cabixi',89,5,'2020-09-11'),
